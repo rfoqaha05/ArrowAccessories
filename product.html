@@ -1,0 +1,81 @@
+<!-- product.html -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>تفاصيل المنتج | Arrow Accessories</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <a class="brand" href="index.html" aria-label="الصفحة الرئيسية">
+        <div class="logo">↗</div>
+        <div class="brand-text">
+          <div class="brand-name">Arrow Accessories</div>
+          <div class="brand-sub">اكسسوارات السهام</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="products.html">المنتجات</a>
+        <a href="cart.html">السلة</a>
+        <a href="checkout.html">الدفع</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-wrap">
+          <input id="headerSearch" type="search" placeholder="ابحث عن منتج..." autocomplete="off" />
+        </div>
+        <a class="cart-btn" href="cart.html" aria-label="السلة">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-text">السلة</span>
+          <span id="cartCount" class="badge">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">الرئيسية</a>
+        <span>›</span>
+        <a href="products.html">المنتجات</a>
+        <span>›</span>
+        <span id="crumbName">تفاصيل</span>
+      </div>
+
+      <div id="productDetails" class="product-details"></div>
+
+      <div id="notFound" class="empty" hidden>
+        <div class="empty-icon">📦</div>
+        <h3>المنتج غير موجود</h3>
+        <p class="muted">تأكد من رابط المنتج أو عد لقائمة المنتجات.</p>
+        <a class="btn primary" href="products.html">رجوع للمنتجات</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="mini-logo">↗</span>
+          <strong>Arrow Accessories</strong> — اكسسوارات السهام
+        </div>
+        <div class="muted">© <span id="year"></span> جميع الحقوق محفوظة</div>
+      </div>
+      <div class="footer-links">
+        <a href="products.html">المنتجات</a>
+        <a href="cart.html">السلة</a>
+        <a href="checkout.html">الدفع</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

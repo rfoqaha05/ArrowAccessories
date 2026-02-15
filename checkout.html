@@ -1,0 +1,136 @@
+<!-- checkout.html -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>الدفع | Arrow Accessories</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <a class="brand" href="index.html" aria-label="الصفحة الرئيسية">
+        <div class="logo">↗</div>
+        <div class="brand-text">
+          <div class="brand-name">Arrow Accessories</div>
+          <div class="brand-sub">اكسسوارات السهام</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="products.html">المنتجات</a>
+        <a href="cart.html">السلة</a>
+        <a href="checkout.html" class="active">الدفع</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-wrap">
+          <input id="headerSearch" type="search" placeholder="ابحث عن منتج..." autocomplete="off" />
+        </div>
+        <a class="cart-btn" href="cart.html" aria-label="السلة">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-text">السلة</span>
+          <span id="cartCount" class="badge">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="page-head">
+        <h1>إتمام الطلب</h1>
+        <p class="muted">أدخل بيانات الشحن. لا يوجد دفع حقيقي — فقط رسالة نجاح.</p>
+      </div>
+
+      <div class="checkout-layout">
+        <div class="card">
+          <div class="card-head">
+            <h2 class="card-title">بيانات العميل</h2>
+          </div>
+          <div class="card-body">
+            <form id="checkoutForm" class="form">
+              <div class="field">
+                <label for="fullName">الاسم الكامل</label>
+                <input id="fullName" name="fullName" type="text" placeholder="مثال: محمد أحمد" required />
+              </div>
+
+              <div class="field">
+                <label for="phone">رقم الجوال</label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="مثال: 07xxxxxxxx" required />
+              </div>
+
+              <div class="field">
+                <label for="address">العنوان</label>
+                <textarea id="address" name="address" rows="4" placeholder="المدينة، الحي، الشارع، رقم المنزل..." required></textarea>
+              </div>
+
+              <button class="btn primary full" type="submit">تأكيد الطلب</button>
+              <a class="btn ghost full" href="cart.html">رجوع للسلة</a>
+            </form>
+
+            <div id="successBox" class="success" hidden>
+              <div class="success-icon">✅</div>
+              <h3>تم استلام طلبك بنجاح</h3>
+              <p class="muted" id="successMsg"></p>
+              <div class="success-actions">
+                <a class="btn primary" href="products.html">متابعة التسوق</a>
+                <a class="btn ghost" href="index.html">الرئيسية</a>
+              </div>
+            </div>
+
+            <div id="checkoutEmpty" class="empty" hidden>
+              <div class="empty-icon">🧺</div>
+              <h3>لا يمكن إتمام الدفع</h3>
+              <p class="muted">سلتك فارغة. أضف منتجات أولاً.</p>
+              <a class="btn primary" href="products.html">تصفح المنتجات</a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card summary">
+          <div class="card-head">
+            <h2 class="card-title">ملخص الطلب</h2>
+          </div>
+          <div class="card-body">
+            <div id="checkoutSummaryItems" class="mini-items"></div>
+            <div class="divider"></div>
+            <div class="row">
+              <span class="muted">عدد العناصر</span>
+              <strong id="checkoutCount">0</strong>
+            </div>
+            <div class="row">
+              <span class="muted">الإجمالي</span>
+              <strong id="checkoutTotal">0 ر.س</strong>
+            </div>
+            <div class="note">
+              بضغطك على "تأكيد الطلب" سيتم حفظ الطلب محلياً فقط ومسح السلة.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="mini-logo">↗</span>
+          <strong>Arrow Accessories</strong> — اكسسوارات السهام
+        </div>
+        <div class="muted">© <span id="year"></span> جميع الحقوق محفوظة</div>
+      </div>
+      <div class="footer-links">
+        <a href="products.html">المنتجات</a>
+        <a href="cart.html">السلة</a>
+        <a href="checkout.html">الدفع</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

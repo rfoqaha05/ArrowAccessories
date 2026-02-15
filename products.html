@@ -1,0 +1,87 @@
+<!-- products.html -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>المنتجات | Arrow Accessories</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <a class="brand" href="index.html" aria-label="الصفحة الرئيسية">
+        <div class="logo">↗</div>
+        <div class="brand-text">
+          <div class="brand-name">Arrow Accessories</div>
+          <div class="brand-sub">اكسسوارات السهام</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="products.html" class="active">المنتجات</a>
+        <a href="cart.html">السلة</a>
+        <a href="checkout.html">الدفع</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-wrap">
+          <input id="headerSearch" type="search" placeholder="ابحث عن منتج..." autocomplete="off" />
+        </div>
+        <a class="cart-btn" href="cart.html" aria-label="السلة">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-text">السلة</span>
+          <span id="cartCount" class="badge">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="page-head">
+        <h1>المنتجات</h1>
+        <p class="muted">ابحث وأضف إلى السلة بسهولة. اضغط على أي منتج لعرض التفاصيل.</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="search-wrap large">
+          <input id="productsSearch" type="search" placeholder="ابحث بالاسم مثل: شاحن، كابل، سماعة..." autocomplete="off" />
+        </div>
+        <div class="toolbar-meta">
+          <span class="pill" id="resultsCount">0 نتيجة</span>
+        </div>
+      </div>
+
+      <div id="productsGrid" class="grid products-grid"></div>
+
+      <div id="emptyState" class="empty" hidden>
+        <div class="empty-icon">🔎</div>
+        <h3>لا توجد نتائج</h3>
+        <p class="muted">جرّب كلمات مختلفة أو امسح البحث.</p>
+        <button class="btn primary" id="clearSearchBtn">مسح البحث</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="mini-logo">↗</span>
+          <strong>Arrow Accessories</strong> — اكسسوارات السهام
+        </div>
+        <div class="muted">© <span id="year"></span> جميع الحقوق محفوظة</div>
+      </div>
+      <div class="footer-links">
+        <a href="products.html">المنتجات</a>
+        <a href="cart.html">السلة</a>
+        <a href="checkout.html">الدفع</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

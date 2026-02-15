@@ -1,0 +1,119 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arrow Accessories | اكسسوارات السهام</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <a class="brand" href="index.html" aria-label="الصفحة الرئيسية">
+        <div class="logo">↗</div>
+        <div class="brand-text">
+          <div class="brand-name">Arrow Accessories</div>
+          <div class="brand-sub">اكسسوارات السهام</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html" class="active">الرئيسية</a>
+        <a href="products.html">المنتجات</a>
+        <a href="cart.html">السلة</a>
+        <a href="checkout.html">الدفع</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-wrap">
+          <input id="headerSearch" type="search" placeholder="ابحث عن منتج..." autocomplete="off" />
+        </div>
+        <a class="cart-btn" href="cart.html" aria-label="السلة">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-text">السلة</span>
+          <span id="cartCount" class="badge">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>اكسسوارات إلكترونية بجودة عالية</h1>
+          <p>
+            شواحن، كابلات، سماعات، وباور بانك — كل ما تحتاجه لأجهزتك في مكان واحد.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="products.html">تصفح المنتجات</a>
+            <a class="btn ghost" href="cart.html">اذهب للسلة</a>
+          </div>
+
+          <div class="hero-badges">
+            <div class="pill">توصيل سريع </div>
+            <div class="pill">دفع عند الاستلام </div>
+            <div class="pill">ضمان جودة</div>
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container section-head">
+        <h2>منتجات مختارة</h2>
+        <a class="link" href="products.html">عرض الكل ←</a>
+      </div>
+
+      <div class="container">
+        <div id="featuredGrid" class="grid products-grid"></div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container section-head">
+        <h2>لماذا Arrow Accessories؟</h2>
+      </div>
+      <div class="container features">
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+          <h3>أداء واعتمادية</h3>
+          <p>منتجات مختارة بعناية لتجربة يومية أفضل.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🧾</div>
+          <h3>فاتورة واضحة</h3>
+          <p>السلة تحسب الإجمالي تلقائياً مع إمكانية تعديل الكمية.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔒</div>
+          <h3>خصوصية</h3>
+          <p>لا يوجد API أو خادم؛ بيانات السلة محفوظة محلياً فقط.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="mini-logo">↗</span>
+          <strong>Arrow Accessories</strong> — اكسسوارات السهام
+        </div>
+        <div class="muted">© <span id="year"></span> جميع الحقوق محفوظة</div>
+      </div>
+      <div class="footer-links">
+        <a href="products.html">المنتجات</a>
+        <a href="cart.html">السلة</a>
+        <a href="checkout.html">الدفع</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
